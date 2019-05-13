@@ -20,10 +20,10 @@ class Counter extends Component {
         return (
             <p>
                 Clicked: {this.props.count} times
-                <button onClick={() => { this.INCREMENT }}>
+                <button onClick={() => { this.props.increment() }}>
                     +
                 </button>
-                <button onClick={() => { this.DECREMENT }}>
+                <button onClick={() => { this.props.decrement() }}>
                     -
                 </button>
                  {/* Uncomment these button tags if you got
@@ -47,7 +47,8 @@ class Counter extends Component {
 // parts it needs from the state object.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state      //  .count unnecessary for tiny apps is what I think
+                          //   I am getting from the above?  
     };
 };
 

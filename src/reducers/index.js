@@ -1,12 +1,14 @@
 import { INCREMENT, DECREMENT } from '../actions';
 import { createStore } from 'redux';
 
-const store = createStore(initialState);
-console.log(store.getState());
+
 const initialState = {
   count: 0,
   action
 };
+
+const store = createStore(initialState);
+console.log(store.getState());
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state

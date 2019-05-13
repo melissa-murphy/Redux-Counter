@@ -1,6 +1,3 @@
-import { increment } from './index';
-import { decrement } from './index';
-
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
@@ -15,8 +12,7 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
-  return { 
-    type: INCREMENT };
+  return { type: INCREMENT };
 };
 
 export const decrement = () => {
