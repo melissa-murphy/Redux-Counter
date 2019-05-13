@@ -1,5 +1,9 @@
+import { increment } from './index';
+import { decrement } from './index';
+
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
+
 
 // Our action creators will return
 // an action packet that our reducer will
@@ -11,8 +15,10 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
+  return { increment };
 };
 
 export const decrement = () => {
   // Fill in this function
+  return { decrement };
 };

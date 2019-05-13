@@ -1,8 +1,12 @@
 import { INCREMENT, DECREMENT } from '../actions';
+import { createStore } from 'redux';
 
+const store = createStore(initialState);
+console.log(store.getState());
 const initialState = {
-  count: 0
-}
+  count: 0,
+  action
+};
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
@@ -12,9 +16,11 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-    // Fill in the body of this case
+      // Fill in the body of this case
+      return state + 1;
     case DECREMENT:
-    // Fill in the body of this case
+      // Fill in the body of this case
+      return state - 1;
     default:
       return state;
   }
