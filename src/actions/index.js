@@ -4,7 +4,6 @@ import { decrement } from './index';
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-
 // Our action creators will return
 // an action packet that our reducer will
 // receive. What does the action packet look like?
@@ -15,10 +14,16 @@ export const DECREMENT = 'DECREMENT';
 
 export const increment = () => {
   // Fill in this function
-  return { increment };
+  return {
+    type: INCREMENT,
+    payload: increment
+  };
 };
 
 export const decrement = () => {
   // Fill in this function
-  return { decrement };
+  return {
+    type: DECREMENT,
+    payload: decrement
+  };
 };
