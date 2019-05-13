@@ -11,15 +11,15 @@ import { INCREMENT, DECREMENT } from '../actions';
 // added to reducer to export as a whole.
 // But is this something that won't work so well in larger scale prods?
 
-export default (state = 0, action) => {
+export default (count = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       // Fill in the body of this case
-      return state + 1;
+      return count + 1;
     case DECREMENT:
       // Fill in the body of this case
-      return state - 1;
+      return count - 1;
     default:
-      return state;
+      return count;
   }
 };
