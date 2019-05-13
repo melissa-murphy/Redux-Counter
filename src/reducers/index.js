@@ -1,21 +1,12 @@
 import { INCREMENT, DECREMENT } from '../actions';
-import { createStore } from 'redux';
 
-
-const initialState = {
-  count: 0,
-  action
-};
-
-const store = createStore(initialState);
-console.log(store.getState());
 
 // Our reducer that handles our two action cases:
 // increment and decrement. It receives the state
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do with the count in each case?
-export default (state = initialState, action) => {
+export default (state = 0, action) => {
   switch (action.type) {
     case INCREMENT:
       // Fill in the body of this case
